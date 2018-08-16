@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["content-script.js"],
+      "all_frames": false
+    }
+  ]
+}
