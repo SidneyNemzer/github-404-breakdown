@@ -13,7 +13,7 @@ const checkSvg = `
   </svg>
 `
 
-const parallaxWrapper = document.querySelector('#parallax_wrapper')
+const IS_404_PAGE = !!document.querySelector('img[alt="404 “This is not the web page you are looking for”"]')
 
 const mapObject = (fn, object) =>
   Object.keys(object)
@@ -101,7 +101,7 @@ const showNotFounds = (segments, offsetIndex) =>
 
 // START
 
-if (parallaxWrapper) {
+if (IS_404_PAGE) {
   const segments =
     window.location.pathname.split('/').filter(segment => segment !== '')
   // Show the URL on the page
@@ -118,7 +118,8 @@ if (parallaxWrapper) {
         )
       )
     })
-  parallaxWrapper.insertAdjacentElement('afterend', container)
+  document.querySelector('body > div.application-main.d-flex.flex-auto.flex-column > main > div.position-relative')
+    .insertAdjacentElement('afterend', container)
 
   // Figure out when the URL 404'd
   segments.reduce((previous, segment, index) => {
