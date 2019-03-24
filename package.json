@@ -1,6 +1,6 @@
 {
   "name": "github-404-breakdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Explains why Github returned a 404",
   "scripts": {
     "start": "webpack --mode development --watch",
