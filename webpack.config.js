@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
               test: /\.js$/,
               loader: 'babel-loader',
               options: {
-                presets: [ 'env' ]
+                presets: [ [ '@babel/preset-env', { targets: { chrome: '60' } } ] ]
               }
             },
             {
@@ -58,10 +58,7 @@ module.exports = (env, argv) => {
           JSON.stringify(manifest, null, 2)
         )
       }),
-      new CleanWebpackPlugin(
-        [ 'build/**/*' ],
-        { root: resolve('.') }
-      )
+      new CleanWebpackPlugin()
     ]
   }
 }
