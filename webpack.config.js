@@ -1,19 +1,18 @@
-const path = require('path')
-const fse = require('fs-extra')
-const OnBuildPlugin = require('on-build-webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require("path");
+const fse = require("fs-extra");
+const OnBuildPlugin = require("on-build-webpack");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-const resolve = relativePath =>
-  path.resolve(__dirname, relativePath)
+const resolve = relativePath => path.resolve(__dirname, relativePath);
 
 module.exports = (env, argv) => {
   return {
     entry: {
-      'content-script': resolve('./src/content-script.js')
+      "content-script": resolve("./src/content-script.js")
     },
     output: {
-      path: resolve('./build'),
-      filename: '[name].js'
+      path: resolve("./build"),
+      filename: "[name].js"
     },
 
     module: {
@@ -23,20 +22,20 @@ module.exports = (env, argv) => {
           oneOf: [
             {
               test: /\.js$/,
-              loader: 'babel-loader',
+              loader: "babel-loader",
               options: {
-                presets: [ [ '@babel/preset-env', { targets: { chrome: '60' } } ] ]
+                presets: [["@babel/preset-env", { targets: { chrome: "60" } }]]
               }
             },
             {
               test: /\.css$/,
               use: [
-                'style-loader',
-                'css-loader',
+                "style-loader",
+                "css-loader",
                 {
-                  loader: 'postcss-loader',
+                  loader: "postcss-loader",
                   options: {
-                    plugins: [ require('postcss-prefixer')({ prefix: 'g4b-' }) ]
+                    plugins: [require("postcss-prefixer")({ prefix: "g4b-" })]
                   }
                 }
               ]
@@ -48,17 +47,18 @@ module.exports = (env, argv) => {
 
     plugins: [
       new OnBuildPlugin(() => {
-        const { name, description, version } = require('./package.json')
-        const manifest = Object.assign(
-          require('./src/manifest.json'),
-          { name, description, version }
-        )
+        const { name, description, version } = require("./package.json");
+        const manifest = Object.assign(require("./src/manifest.json"), {
+          name,
+          description,
+          version
+        });
         fse.outputFileSync(
-          resolve('./build/manifest.json'),
+          resolve("./build/manifest.json"),
           JSON.stringify(manifest, null, 2)
-        )
+        );
       }),
       new CleanWebpackPlugin()
     ]
-  }
-}
+  };
+};
