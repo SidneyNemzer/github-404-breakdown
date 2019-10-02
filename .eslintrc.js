@@ -7,6 +7,7 @@ module.exports = {
     "spaced-comment": "off",
     "space-in-parens": "off",
     quotes: "off",
-    semi: "off"
+    semi: "off",
+    "space-before-function-paren": "off"
   }
 };
