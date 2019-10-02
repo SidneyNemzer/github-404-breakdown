@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "github-404-breakdown",
   "version": "1.0.1",
   "description": "Explains why Github returned a 404",
@@ -21,11 +22,13 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "fs-extra": "^7.0.1",
+    "jest": "^24.9.0",
     "on-build-webpack": "^0.1.0",
     "postcss-loader": "^3.0.0",
     "postcss-prefixer": "^2.1.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  }
+  },
+  "dependencies": {}
 }
