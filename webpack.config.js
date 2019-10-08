@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
               }
             },
             {
-              test: /\.css$/,
+              test: /\.scss$/,
               use: [
                 "style-loader",
                 "css-loader",
@@ -37,7 +37,8 @@ module.exports = (env, argv) => {
                   options: {
                     plugins: [require("postcss-prefixer")({ prefix: "g4b-" })]
                   }
-                }
+                },
+                "sass-loader"
               ]
             }
           ]

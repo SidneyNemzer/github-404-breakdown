@@ -1,7 +1,7 @@
 module.exports = {
   extends: "standard",
-  env: { browser: true },
-  plugins: ["standard", "promise"],
+  env: { browser: true, "jest/globals": true },
+  plugins: ["standard", "promise", "jest"],
   rules: {
     "valid-typeof": "off",
     "spaced-comment": "off",
