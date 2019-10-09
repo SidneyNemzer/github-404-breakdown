@@ -1,3 +1,6 @@
+$success-color: #2cbe4e;
+$error-color: #cb2431;
+
 .layout-container {
   margin-top: 32px;
   text-align: center;
@@ -25,12 +28,19 @@
 }
 
 .success {
-  color: #2cbe4e;
+  color: $success-color;
+}
+
+.success-background {
+  background: $success-color;
+}
+
+.error-background {
+  background: $error-color;
 }
 
 .icon {
   position: absolute;
-  background: #2cbe4e;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -51,22 +61,30 @@
 } */
 
 .not-found {
-  color: red;
+  color: #cb2431;
 }
 
 .after-not-found {
-  color: red;
+  color: #cb2431;
   opacity: 0.6;
 }
 
-.success-bar {
+.bar {
   position: absolute;
-  background: #2cbe4e;
   height: 4px;
-  left: 0;
-  width: 0;
   top: calc(70% - 2px);
   border-radius: 4px;
+}
+
+.error-bar {
+  background: $error-color;
+  transition: left 0.3s right 0.3s;
+}
+
+.success-bar {
+  background: $success-color;
+  left: 0;
+  width: 0;
   transition: right 0.3s;
 }
 
@@ -81,7 +99,7 @@ $loading-bar-height: 5px;
 }
 
 .spacer {
-  width: 5px;
+  width: 3px;
 }
 
 .loading-bar {

@@ -13,7 +13,7 @@ export default segments => {
       ])
     ]),
 
-    el("div", { class: "success-bar" }, [check]),
+    el("div", { class: "bar success-bar" }, [check]),
 
     el("div", { class: "loading-container" }, [
       el("div", { class: "loading-bar loading-bar-1" }),

@@ -11,8 +11,8 @@ const checkSvg = `
   </svg>
 `;
 
-export const cross = el("span", { class: "icon" });
+export const cross = el("span", { class: "icon error-background" });
 cross.innerHTML = crossSvg;
 
-export const check = el("span", { class: "icon" });
+export const check = el("span", { class: "icon success-background" });
 check.innerHTML = checkSvg;
