@@ -1,9 +1,19 @@
 $success-color: #2cbe4e;
 $error-color: #cb2431;
+$link-color: #0366d6;
+
+.segment a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .layout-container {
   margin-top: 32px;
   text-align: center;
+}
+
+.segment {
+  transition: color 0.2s;
 }
 
 .container {
@@ -29,6 +39,11 @@ $error-color: #cb2431;
 
 .success {
   color: $success-color;
+  cursor: pointer;
+}
+
+.part-of-link {
+  color: $link-color;
 }
 
 .success-background {
@@ -50,15 +65,6 @@ $error-color: #cb2431;
   align-items: center;
   justify-content: center;
 }
-
-/* .success:hover {
-  text-decoration: underline;
-}
-
-.success a {
-  color: inherit;
-  text-transform: none;
-} */
 
 .not-found {
   color: #cb2431;

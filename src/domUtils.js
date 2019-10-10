@@ -52,3 +52,7 @@ export const select = selector =>
 export const addClass = (element, class_) => {
   element.classList.add(CLASS_PREFIX + class_);
 };
+
+export const removeClass = (element, class_) => {
+  element.classList.remove(CLASS_PREFIX + class_);
+};
