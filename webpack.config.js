@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
     },
     output: {
       path: resolve("./build"),
-      filename: "[name].js"
+      filename: "github-404-breakdown.js"
     },
 
     module: {

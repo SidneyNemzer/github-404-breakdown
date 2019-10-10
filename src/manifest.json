@@ -3,7 +3,7 @@
   "content_scripts": [
     {
       "matches": ["*://github.com/*"],
-      "js": ["content-script.js"],
+      "js": ["github-404-breakdown.js"],
       "all_frames": false
     }
   ]
