@@ -1,4 +1,4 @@
-import { el } from "../domUtils";
+import { el, addClass } from "../domUtils";
 import { check } from "./icons";
 import { CONTAINER_PARENT_SELECTOR } from "../constants";
 
@@ -29,4 +29,8 @@ export default segments => {
   document
     .querySelector(CONTAINER_PARENT_SELECTOR)
     .insertAdjacentElement("afterend", layoutContainer);
+
+  setTimeout(() => {
+    addClass(container, "show");
+  });
 };

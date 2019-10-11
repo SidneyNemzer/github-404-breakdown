@@ -21,10 +21,12 @@ $link-color: #0366d6;
   border: 1px solid #e1e4e8;
   border-radius: 3px;
   display: inline-block;
-  padding: 10px;
+  padding: 0 10px;
   font-size: 20px;
   position: relative;
-  height: 80px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s, padding 0.5s;
 }
 
 .slash {
@@ -64,6 +66,8 @@ $link-color: #0366d6;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .not-found {
@@ -80,18 +84,15 @@ $link-color: #0366d6;
   height: 4px;
   top: calc(70% - 2px);
   border-radius: 4px;
-}
-
-.error-bar {
-  background: $error-color;
-  transition: left 0.3s right 0.3s;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .success-bar {
   background: $success-color;
   left: 0;
   width: 0;
-  transition: right 0.3s;
+  transition: right 0.3s, opacity 0.5s;
 }
 
 $loading-bar-width: 20px;
@@ -102,6 +103,8 @@ $loading-bar-height: 5px;
   display: flex;
   justify-content: center;
   top: calc(70% - #{$loading-bar-height} / 2);
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .spacer {
@@ -131,5 +134,18 @@ $loading-bar-height: 5px;
 
   100% {
     background: #868686;
+  }
+}
+
+.show {
+  &.container {
+    height: 80px;
+    padding: 10px;
+  }
+
+  .icon,
+  .bar,
+  .loading-container {
+    opacity: 1;
   }
 }
