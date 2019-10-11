@@ -1,6 +1,7 @@
 $success-color: #2cbe4e;
 $error-color: #cb2431;
 $link-color: #0366d6;
+$background-gray: #fafbfc;
 
 .segment a {
   text-decoration: none;
@@ -17,7 +18,7 @@ $link-color: #0366d6;
 }
 
 .container {
-  background: #fafbfc;
+  background: $background-gray;
   border: 1px solid #e1e4e8;
   border-radius: 3px;
   display: inline-block;
@@ -71,12 +72,7 @@ $link-color: #0366d6;
 }
 
 .not-found {
-  color: #cb2431;
-}
-
-.after-not-found {
-  color: #cb2431;
-  opacity: 0.6;
+  color: $error-color;
 }
 
 .bar {
