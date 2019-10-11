@@ -1,7 +1,7 @@
 const path = require("path");
 const fse = require("fs-extra");
-const OnBuildPlugin = require("on-build-webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const resolve = relativePath => path.resolve(__dirname, relativePath);
 
@@ -47,18 +47,7 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new OnBuildPlugin(() => {
-        const { name, description, version } = require("./package.json");
-        const manifest = Object.assign(require("./src/manifest.json"), {
-          name,
-          description,
-          version
-        });
-        fse.outputFileSync(
-          resolve("./build/manifest.json"),
-          JSON.stringify(manifest, null, 2)
-        );
-      }),
+      new CopyPlugin([resolve("./src/manifest.json")]),
       new CleanWebpackPlugin()
     ]
   };
