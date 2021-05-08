@@ -3,6 +3,9 @@
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest"
   },
   "devDependencies": {
@@ -22,6 +25,7 @@
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "postcss-prefixer": "^2.1.1",
+    "prettier": "^2.2.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",

@@ -70,7 +70,7 @@ describe("testPaths", () => {
       [0, true, "a"],
       [2, true, "c"],
       [4, true, "e"],
-      [5, false, "f"]
+      [5, false, "f"],
     ];
 
     const update = (index, status) => {
@@ -109,7 +109,10 @@ describe("testPaths", () => {
   it("works with the bad segment in the middle (rounded down)", async () => {
     expect.assertions(4);
 
-    let updateOrder = [[0, true, "a"], [2, false, "c"]];
+    let updateOrder = [
+      [0, true, "a"],
+      [2, false, "c"],
+    ];
     let testPathOrder = [true, false, true];
 
     const update = (index, status) => {
@@ -132,7 +135,11 @@ describe("testPaths", () => {
   it("works with the bad segment in the middle (rounded up)", async () => {
     expect.assertions(6);
 
-    let updateOrder = [[0, true, "a"], [2, true, "c"], [3, false, "d"]];
+    let updateOrder = [
+      [0, true, "a"],
+      [2, true, "c"],
+      [3, false, "d"],
+    ];
     let testPathOrder = [true, true, false];
 
     const update = (index, status) => {

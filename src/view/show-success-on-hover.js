@@ -5,7 +5,7 @@ export const renderLink = () => {
   const hovered = select(".segment.success:hover");
 
   let beforeHovered = !!hovered;
-  segments.forEach(segment => {
+  segments.forEach((segment) => {
     if (beforeHovered) {
       addClass(segment, "part-of-link");
     } else {
@@ -20,7 +20,7 @@ export const renderLink = () => {
 
 export default () => {
   const segments = selectAll(".segment");
-  segments.forEach(segment => {
+  segments.forEach((segment) => {
     segment.addEventListener("mouseenter", renderLink);
     segment.addEventListener("mouseleave", renderLink);
   });

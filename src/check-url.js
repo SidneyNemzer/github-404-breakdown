@@ -53,7 +53,7 @@ export const testPath = async (segment, previousSegments, hasNextSegment) => {
  * @param {Function} testPath
  */
 export const testPaths = async (path, update, testPath_ = testPath) => {
-  const segments = path.split("/").filter(segment => !!segment);
+  const segments = path.split("/").filter((segment) => !!segment);
   const oks = new Set();
   let backtracked = false;
   let index = 0;

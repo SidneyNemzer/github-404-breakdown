@@ -31,7 +31,7 @@ const onPathTested = (index, ok) => {
 if (isNotFoundPage()) {
   const segments = window.location.pathname
     .split("/")
-    .filter(segment => segment !== "");
+    .filter((segment) => segment !== "");
 
   // Add the default content to the page
   renderPath(segments);

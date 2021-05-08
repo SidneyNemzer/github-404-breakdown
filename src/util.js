@@ -7,7 +7,7 @@ const mapObject = (fn, object) =>
 export const findTypes = (labels, args) =>
   mapObject(
     (label, type) =>
-      args.find(arg =>
+      args.find((arg) =>
         type === "array" ? arg instanceof Array : typeof arg === type
       ),
     labels

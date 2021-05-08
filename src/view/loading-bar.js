@@ -5,7 +5,7 @@ export const hideLoadingBar = () => {
   loadingBar.style.display = "none";
 };
 
-export const moveLoadingBar = index => {
+export const moveLoadingBar = (index) => {
   const container = select(".container");
   const segments = selectAll(".segment");
 

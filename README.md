@@ -6,8 +6,8 @@
 
 A Chrome extension that explains why Github returned a 404
 
-* [**INSTALL**][chrome-web-store] - On the Chrome Web Store
-* [**FEEDBACK / BUG REPORT**][issues] - Submit a question, idea, or bug report
+- [**INSTALL**][chrome-web-store] - On the Chrome Web Store
+- [**FEEDBACK / BUG REPORT**][issues] - Submit a question, idea, or bug report
 
 [chrome-web-store]: https://chrome.google.com/webstore/detail/github-404-breakdown/pnhdlhabpckpibnkkddmgcimdejbljge
 [issues]: https://github.com/SidneyNemzer/github-404-breakdown/issues/new

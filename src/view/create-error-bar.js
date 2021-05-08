@@ -5,7 +5,7 @@ import getSegmentBounds from "./segment-bounds";
 /**
  * Creates an error bar under the segment at the given `index`
  */
-export default index => {
+export default (index) => {
   const [left, right] = getSegmentBounds(index, index);
 
   const errorBar = el("div", { class: "bar" }, [cross]);
