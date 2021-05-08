@@ -23,7 +23,7 @@ module.exports = (env, argv) => {
               test: /\.js$/,
               loader: "babel-loader",
               options: {
-                presets: [["@babel/preset-env", { targets: { chrome: "60" } }]]
+                presets: [["@babel/preset-env", { targets: { chrome: "80" } }]]
               }
             },
             {
