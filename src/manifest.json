@@ -5,6 +5,10 @@
   "description": "Explains why Github returned a 404",
   "version": "2.0.0",
 
+  "icons": {
+    "128": "icon.png"
+  },
+
   "content_scripts": [
     {
       "matches": ["*://github.com/*"],

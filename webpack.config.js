@@ -46,7 +46,10 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new CopyPlugin([resolve("./src/manifest.json")]),
+      new CopyPlugin([
+        resolve("./src/manifest.json"),
+        resolve("./images/icon.png")
+      ]),
       new CleanWebpackPlugin()
     ]
   };
