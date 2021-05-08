@@ -1,6 +1,6 @@
+import { CONTAINER_PARENT_SELECTOR } from "../constants";
 import { el, addClass } from "../domUtils";
 import { check } from "./icons";
-import { CONTAINER_PARENT_SELECTOR } from "../constants";
 
 export default segments => {
   const container = el("div", { class: "container" }, [

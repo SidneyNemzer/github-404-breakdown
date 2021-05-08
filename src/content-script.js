@@ -1,13 +1,13 @@
 import "./style.scss";
 import { testPaths } from "./check-url";
 import { NOT_FOUND_PAGE_SELECTOR } from "./constants";
-import renderPath from "./view/path";
-import resizeSuccessBar from "./view/resize-success-bar";
-import { hideLoadingBar, moveLoadingBar } from "./view/loading-bar";
+import addAnchors from "./view/add-anchors";
 import addClassToSegments from "./view/add-class-to-segments";
 import createErrorBar from "./view/create-error-bar";
+import { hideLoadingBar, moveLoadingBar } from "./view/loading-bar";
+import renderPath from "./view/path";
+import resizeSuccessBar from "./view/resize-success-bar";
 import showLinkOnHover, { renderLink } from "./view/show-success-on-hover";
-import addAnchors from "./view/add-anchors";
 
 const isNotFoundPage = () => !!document.querySelector(NOT_FOUND_PAGE_SELECTOR);
 

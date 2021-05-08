@@ -1,5 +1,5 @@
-import { findTypes } from "./util";
 import { CLASS_PREFIX } from "./constants";
+import { findTypes } from "./util";
 
 // TODO el('div', [children]) should work but it does not
 export const el = (name, ...args) => {

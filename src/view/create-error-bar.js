@@ -1,6 +1,6 @@
 import { el, select } from "../domUtils";
-import getSegmentBounds from "./segment-bounds";
 import { cross } from "./icons";
+import getSegmentBounds from "./segment-bounds";
 
 /**
  * Creates an error bar under the segment at the given `index`
