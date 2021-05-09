@@ -1,6 +1,6 @@
 # Github 404 Breakdown
 
-[![Snippets](images/small-tile.png)][chrome-web-store]
+[![](images/small-tile.png)][chrome-web-store]
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/pnhdlhabpckpibnkkddmgcimdejbljge.svg)][chrome-web-store]
 
