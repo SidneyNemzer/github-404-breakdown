@@ -1,4 +1,4 @@
-const { UnexpectedStatus, testPath, testPaths } = require("./check-url");
+import { UnexpectedStatus, testPath, testPaths } from "./check-url";
 
 describe("testPath", () => {
   const mockFetch = jest.fn();
@@ -54,7 +54,7 @@ describe("testPath", () => {
   });
 
   it("throws when fetch returns an unexpected status", async () => {
-    const res = { ok: false, status: 500 };
+    const res = { ok: false, status: 500 } as Response;
     mockFetch.mockReturnValue(Promise.resolve(res));
 
     expect(testPath("a", [], true)).rejects.toEqual(new UnexpectedStatus(res));
@@ -66,7 +66,7 @@ describe("testPaths", () => {
   it("works with the bad segment at the end", async () => {
     expect.assertions(8);
 
-    let order = [
+    let order: [number, boolean, string][] = [
       [0, true, "a"],
       [2, true, "c"],
       [4, true, "e"],
@@ -90,7 +90,7 @@ describe("testPaths", () => {
   it("works with the bad segment at the start", async () => {
     expect.assertions(2);
 
-    let order = [[0, false, "a"]];
+    let order = [[0, false, "a"] as const];
 
     const update = (index, status) => {
       const [[expectedIndex, expectedStatus], ...rest] = order;

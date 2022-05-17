@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Github 404 Breakdown",
   "description": "Explains why Github returned a 404",
@@ -9,10 +9,18 @@
     "128": "icon.png"
   },
 
+  "web_accessible_resources": [
+    {
+      "resources": ["github-404-breakdown.js"],
+      "matches": ["*://github.com/*"]
+    }
+  ],
+
   "content_scripts": [
     {
       "matches": ["*://github.com/*"],
-      "js": ["github-404-breakdown.js"],
+      "js": ["github-404-breakdown-content-script.js"],
+      "css": ["github-404-breakdown.css"],
       "all_frames": false
     }
   ]

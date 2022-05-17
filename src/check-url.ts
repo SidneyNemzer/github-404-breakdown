@@ -1,5 +1,7 @@
 export class UnexpectedStatus extends Error {
-  constructor(res) {
+  res: Response;
+
+  constructor(res: Response) {
     super("Unexpected status: " + res.status);
     this.res = res;
   }
