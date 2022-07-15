@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "Github 404 Breakdown",
-  "description": "Explains why Github returned a 404",
+  "description": "Explains why GitHub returned a 404",
   "version": "2.0.1",
 
   "icons": {
