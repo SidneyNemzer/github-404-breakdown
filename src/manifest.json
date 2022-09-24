@@ -3,7 +3,7 @@
 
   "name": "Github 404 Breakdown",
   "description": "Explains why GitHub returned a 404",
-  "version": "3.0",
+  "version": "3.1",
 
   "icons": {
     "128": "icon.png"
